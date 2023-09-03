@@ -11,7 +11,6 @@ const login = () => {
   }
   return (
     <Layout>
-
         <Head>
             <title>Login</title>
         </Head>
@@ -20,7 +19,9 @@ const login = () => {
             <div className="title">
                 <h1 className='text-gray-800 text-4xl font-bold py-4'>Login</h1>
             </div>
+
             {/* form */}
+
             <form className='flex flex-col gap-5'>
             <div className={Styles.input_group}>
               <input 
@@ -40,7 +41,7 @@ const login = () => {
               />
               </div>
 
-              {/* login buttons */}
+              
               <div className="input-button">
                 <button type="submit" className={Styles.button}>
                   Login
@@ -57,6 +58,7 @@ const login = () => {
                 </button>
               </div>
             </form>
+
             <p className='text-center text-gray-400'>
               don't have an account yet?<Link href={'/register'}>
                 Sign Up
