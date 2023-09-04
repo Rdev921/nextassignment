@@ -175,7 +175,7 @@ const Dashboard = () => {
 
             {show ? (
               users.map((user) => (
-                <div className="show-user-data">
+                <div className="show-user-data" key={user.id}>
                   <div className="personal-info">
                     <h1>{user.fullname}</h1>
                     <p>{user.phone}</p>
