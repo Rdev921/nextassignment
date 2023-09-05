@@ -7,7 +7,7 @@ import { signIn } from "next-auth/react"
 const login = () => {
 
   async function handleGoogleSignin(){
-    signIn('google');
+    signIn('google',{callbackUrl:"http://localhost:3000"})
   }
   return (
     <Layout>
