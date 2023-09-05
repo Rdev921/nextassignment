@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MdOutlineNotificationsNone } from 'react-icons/md'
+import { FaBars } from 'react-icons/fa'
 
 
 const initialState = {
@@ -16,6 +17,12 @@ const Dashboard = () => {
   const [formState, setFormState] = useState(initialState);
   const [users, setUsers] = useState([]);
   const [show, setshow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = ()=>{
+    setIsOpen(!isOpen);
+  }
+  
 
   const fetchData = async () => {
     try {
@@ -70,8 +77,11 @@ const Dashboard = () => {
 
       <div className="flex-container">
         {/* ---------------Sidebar-------------------- */}
-        <div className='sidebar'>
+        <div className='sidebar' style={{width : isOpen ? "15%"  : "110px"}}>
           <ul>
+            <div className="bars" style={{marginLeft : isOpen ? "0px"  : "0px"}}>
+            <FaBars onClick={toggle} />
+            </div>
             <h2 className='header'>Board.</h2>
             <li><img src="images/dashboard.png" alt="Dashboard" /><p>Dashboard</p></li>
             <li><img src="images/reports.png" alt="Transactions" /><p>Transactions</p></li>
