@@ -15,9 +15,9 @@ const login = () => {
             <title>Login</title>
         </Head>
 
-        <section className='w-3/4 mx-auto flex flex-col gap-10'>
+        <section className='w-3/4 mx-auto flex flex-col gap-2'>
             <div className="title">
-                <h1 className='text-gray-800 text-4xl font-bold py-4'>Login</h1>
+                <h3 className='text-gray-800 text-3xl font-bold py-2'>Login</h3>
             </div>
 
             {/* form */}
