@@ -77,7 +77,7 @@ const Dashboard = () => {
 
       <div className="flex-container">
         {/* ---------------Sidebar-------------------- */}
-        <div className='sidebar' style={{width : isOpen ? "15%"  : "50px"}}>
+        <div className='sidebar'>
           <ul>
             <div className="bars" style={{marginLeft : isOpen ? "0px"  : "0px"}}>
             <FaBars onClick={toggle} />
